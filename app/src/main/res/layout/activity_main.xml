@@ -16,6 +16,7 @@
             android:layout_height="match_parent">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarMain"
+                app:titleTextColor="#ffff"
                 android:background="#289AF4"
                 android:title="Trang chính"
                 android:layout_width="match_parent"

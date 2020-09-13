@@ -1,6 +1,7 @@
 package com.example.app.onlineshop.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.app.onlineshop.R;
+import com.example.app.onlineshop.activities.DetailProductActivity;
 import com.example.app.onlineshop.model.Product;
+import com.example.app.onlineshop.ultil.CheckConnection;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -61,6 +64,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
             imageProduct =(ImageView) itemView.findViewById(R.id.imgProduct);
             price = (TextView)itemView.findViewById(R.id.textPrice);
             nameProduct = (TextView)itemView.findViewById(R.id.textNamePro);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, DetailProductActivity.class);
+                    intent.putExtra("InfoProduct", products.get(getPosition()));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

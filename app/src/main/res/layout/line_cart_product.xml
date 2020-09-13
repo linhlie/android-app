@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:weightSum="10"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_margin="5dp"
+            android:id="@+id/imgCartProduct"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:text="Tên sản phẩm"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:id="@+id/textCartProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:text="Thành tiền: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_margin="3dp"
+                android:text="Giá sản phẩm"
+                android:id="@+id/textViewPriceCart"
+                android:textColor="#DC4040"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="-"
+                android:textSize="30sp"
+                android:focusable="false"
+                android:id="@+id/buttonMin"
+                android:layout_marginTop="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@null"
+                android:text="1"
+                android:textSize="30sp"
+                android:focusable="false"
+                android:id="@+id/buttonValues"
+                android:layout_marginTop="5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:text="+"
+                android:textSize="30sp"
+                android:focusable="false"
+                android:id="@+id/buttonPlus"
+                android:layout_marginTop="5dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.app.onlineshop.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,9 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toolbar;
@@ -24,6 +28,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.app.onlineshop.R;
 import com.example.app.onlineshop.adapter.ProductAdapter;
 import com.example.app.onlineshop.adapter.ProductTypeAdapter;
+import com.example.app.onlineshop.model.CartProduct;
 import com.example.app.onlineshop.model.Product;
 import com.example.app.onlineshop.model.ProductType;
 import com.example.app.onlineshop.ultil.CheckConnection;
@@ -54,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     String imgProType ="";
     ArrayList<Product> products;
     ProductAdapter productAdapter;
+    public static ArrayList<CartProduct>cartProducts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,11 +71,85 @@ public class MainActivity extends AppCompatActivity {
             ActioViewFlipper();
             GetDataProType();
             GetNewProduct();
+            CatchOnItemListView();
         } else {
             CheckConnection.showToast_Short(getApplicationContext(),"Kiểm tra kết nối internet!");
             finish();
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menuCart:
+                Intent intent = new Intent(getApplicationContext(), CartActivity.class );
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void CatchOnItemListView() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                switch (i){
+                    case 0:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        } else {
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối internet!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 1:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this, MobilePhoneActivity.class);
+                            intent.putExtra("idProType", productTypes.get(i).id);
+                            startActivity(intent);
+                        } else {
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối internet!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 2:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this, LaptopActivity.class);
+                            intent.putExtra("idProType", productTypes.get(i).id);
+                            startActivity(intent);
+                        } else {
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối internet!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 3:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+                            startActivity(intent);
+                        } else {
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối internet!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 4:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                            startActivity(intent);
+                        } else {
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối internet!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                }
+            }
+        });
     }
 
     private void GetNewProduct() {
@@ -115,8 +195,6 @@ public class MainActivity extends AppCompatActivity {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.pathProType, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                System.out.println("test");
-                System.out.println(response);
                 if (response !=null){
                     for (int i =0; i<response.length();i++){
                         try {
@@ -168,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
     private void ActionBar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTransitionName("Trang chủ");
         toolbar.setNavigationIcon(android.R.drawable.ic_menu_sort_by_size);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,5 +273,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.setAdapter(productAdapter);
+        if (cartProducts!=null){
+
+        } else {
+            cartProducts = new ArrayList<>();
+        }
     }
 }
