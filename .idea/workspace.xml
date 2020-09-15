@@ -12,28 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ba17adc-bc7f-4663-96a9-f24a440430d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/AboutActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/CartActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/ContactActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/DetailProductActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/LaptopActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/MobilePhoneActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/adapter/CartProductAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/adapter/LaptopAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/adapter/MobilePhoneAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/model/CartProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_laptop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mobile_phone.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/line_cart_product.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/line_mobile_laptop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/line_mobile_phone.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/progressbar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/InfoCustomerActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/boder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_edit_location_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_email_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_customer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -44,15 +30,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/AboutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/AboutActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/CartActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/CartActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/ContactActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/ContactActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/adapter/ProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/adapter/ProductAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/ultil/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/ultil/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +86,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChatFun" />
+    <property name="last_opened_file_path" value="C:/LMS/LMS_mobile/android" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
@@ -107,6 +97,12 @@
       <recent name="com.example.app.onlineshop.activities" />
     </key>
     <key name="android.template.725161587">
+      <recent name="com.example.app.onlineshop.activities" />
+    </key>
+    <key name="android.template.-1883789951">
+      <recent name="com.example.app.onlineshop.activities" />
+    </key>
+    <key name="android.template.-254812104">
       <recent name="com.example.app.onlineshop.activities" />
     </key>
   </component>
@@ -188,46 +184,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="958" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1599884375042" />
+    <state x="883" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600103497883">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="883" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600103497883" />
     <state x="698" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1599888436594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="698" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1599888436594" />
-    <state x="698" y="170" key="AndroidCreateResourceFileDialog" timestamp="1599888446045">
+    <state x="698" y="170" key="AndroidCreateResourceFileDialog" timestamp="1600007763707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="698" y="170" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599888446045" />
-    <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1599676105114">
+    <state x="698" y="170" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1600007763707" />
+    <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1600066997810">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599676105113" />
-    <state width="1491" height="308" key="GridCell.Tab.0.bottom" timestamp="1600005522455">
+    <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600066997810" />
+    <state width="1491" height="300" key="GridCell.Tab.0.bottom" timestamp="1600107822113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="308" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600005522455" />
-    <state width="1491" height="308" key="GridCell.Tab.0.center" timestamp="1600005522455">
+    <state width="1491" height="300" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600107822113" />
+    <state width="1491" height="300" key="GridCell.Tab.0.center" timestamp="1600107822113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="308" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600005522455" />
-    <state width="1491" height="308" key="GridCell.Tab.0.left" timestamp="1600005522455">
+    <state width="1491" height="300" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600107822113" />
+    <state width="1491" height="300" key="GridCell.Tab.0.left" timestamp="1600107822112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="308" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600005522455" />
-    <state width="1491" height="308" key="GridCell.Tab.0.right" timestamp="1600005522455">
+    <state width="1491" height="300" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600107822112" />
+    <state width="1491" height="300" key="GridCell.Tab.0.right" timestamp="1600107822113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="308" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600005522455" />
-    <state x="860" y="100" width="584" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1599806678486">
+    <state width="1491" height="300" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600107822113" />
+    <state x="860" y="100" width="584" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600189232128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="860" y="100" width="584" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1599806678486" />
+    <state x="860" y="100" width="584" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1600189232128" />
     <state x="847" y="144" width="611" height="536" key="find.popup" timestamp="1600001851502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="847" y="144" width="611" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1600001851502" />
-    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599674922125">
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600106644485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599674922125" />
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600106644485" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,6 +236,11 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/MobilePhoneActivity.java</url>
           <line>94</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/app/onlineshop/activities/InfoCustomerActivity.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

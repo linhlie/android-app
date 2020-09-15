@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     productTypes.add(3, new ProductType(0, "Liên hệ", "https://chuakeo.com.vn/wp-content/uploads/2018/07/contact-us.jpg"));
-                    productTypes.add(4, new ProductType(0, "Thông tin", "https://bucket.nhanh.vn/store/23282/art/article_1516341371_760.jpg"));
+                    productTypes.add(4, new ProductType(0, "Thông tin", "http://media3.scdn.vn/img2/2017/5_29/9qkur9.jpg"));
                 }
             }
         }, new Response.ErrorListener() {

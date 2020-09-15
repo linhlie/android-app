@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import com.example.app.onlineshop.R;
 import com.example.app.onlineshop.adapter.CartProductAdapter;
 import com.example.app.onlineshop.model.CartProduct;
+import com.example.app.onlineshop.ultil.CheckConnection;
 
 import java.text.DecimalFormat;
 
@@ -37,6 +39,28 @@ public class CartActivity extends AppCompatActivity {
         CheckData();
         EventUltil();
         CatchOnItemListView();
+        EventButton();
+    }
+
+    private void EventButton() {
+        buttonContinuce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (MainActivity.cartProducts.size()>0){
+                    Intent intent = new Intent(getApplicationContext(),InfoCustomerActivity.class);
+                    startActivity(intent);
+                } else {
+                    CheckConnection.showToast_Short(getApplicationContext(), "Chưa có sản phầm nào");
+                }
+            }
+        });
     }
 
     private void CatchOnItemListView() {
@@ -61,6 +85,7 @@ public class CartActivity extends AppCompatActivity {
                             } else {
                                 textViewNoti.setVisibility(View.INVISIBLE);
                                 cartProductAdapter.notifyDataSetChanged();
+                                listView.setAdapter(cartProductAdapter);
                                 EventUltil(); //giu de xoa
                             }
                         }
@@ -70,6 +95,7 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         cartProductAdapter.notifyDataSetChanged();
+                        listView.setAdapter(cartProductAdapter);
                         EventUltil();
                     }
                 });
