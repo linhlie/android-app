@@ -1,12 +1,15 @@
 package com.example.app.onlineshop.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +23,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class AboutActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -63,26 +67,55 @@ public class AboutActivity extends AppCompatActivity implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng kma = new LatLng(20.981004, 105.796133);
+        LatLng budien = new LatLng(20.973553, 105.778447);
+        //tao 1 marker
+        mMap.addMarker(new MarkerOptions()
+                .position(budien)
+                .title("Bưu điện - Hà Đông")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
+        );
+        mMap.addPolyline(new PolylineOptions().add(
+                kma
+                )
+                        .width(10)
+                        .color(Color.BLUE)
+        );
+
+
+
+
+        mMap.addMarker(new MarkerOptions().position(kma).title("Shop online KMA"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kma,18));
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 0);
+
             //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        mMap.setMyLocationEnabled(true);
+        else {
+            mMap.setMyLocationEnabled(true);
+        }
+    }
 
-        // Add a marker in Sydney and move the camera
-        LatLng KMA = new LatLng(20.980222, 105.796281);
-        mMap.addMarker(new MarkerOptions().position(KMA).title("Học Viện kỹ thuật Mật Mã").snippet("141 Chiến thắng - Tân Triều - Thanh Trì - Hà Nội").icon(BitmapDescriptorFactory.defaultMarker()));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(KMA));
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(KMA).zoom(90).build();
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition((cameraPosition)));
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode==0){
+            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
+                mMap.setMyLocationEnabled(true);
+            }
 
+        }
     }
 
 }
